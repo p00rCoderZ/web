@@ -1,0 +1,15 @@
+version: '3.2'
+services:
+  website:
+    build: 
+      dockerfile: Docker/Dockerfile
+      context: .
+    container_name: website
+    hostname: website
+    ports:
+      - "8000:8080"
+    volumes:
+      - ./src:/usr/web/src
+    entrypoint: /bin/bash 
+    tty: true
+    stdin_open: true
