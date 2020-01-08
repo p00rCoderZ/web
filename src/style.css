@@ -89,6 +89,16 @@ nav{
 	background-repeat:no-repeat;
 	background-size: cover;
 	background-position:40%;
+	position:relative;
+	
+}
+#leftPanel-content{
+	
+	position:absolute;
+	bottom:0;
+	left:0;
+	background-color:white;
+	opacity:0.5;
 	
 }
 
@@ -99,8 +109,17 @@ nav{
 	background-repeat:no-repeat;
 	background-size: cover;
 	background-position:80%;
-	
+	position:relative;
 }
+#rightPanel-content{
+	position:absolute;
+	bottom:0;
+	left:0;
+	background-color:white;
+	opacity:0.5;
+}
+
+
 footer{
 	background-color:black;
 	width:100%;
