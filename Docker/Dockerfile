@@ -6,3 +6,4 @@ WORKDIR /usr/web/src
 # RUN go mod download
 
 COPY ./src .
+RUN go get -d ./...
