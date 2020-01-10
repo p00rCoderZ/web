@@ -1,6 +1,12 @@
 # web
 repo for kup website
 
+### Getting api git submodule
+```
+# make sure to update and initialize submodules
+git submodule update --init --recursive
+```
+
 ### Starting containers
 ```
 # To start up containers 
