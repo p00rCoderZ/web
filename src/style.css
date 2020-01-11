@@ -68,9 +68,13 @@ nav{
 	
 }
 
-#login:hover, #signup:hover, #logo:hover{
+#login:hover, #signup:hover{
 	background-color:lightgray;
 	
+	
+}
+#logo:hover{
+	opacity:0.5;
 	
 }
 #loginIcon{
