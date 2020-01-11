@@ -8,5 +8,5 @@ function logIn(){
 }
 
 function mainPage(){
-	$('main').html("<div id=info>Przeglądaj istniejące ogłoszenia lub dodaj własne!</div><div id=leftPanel><!-- <img> --><div id=leftPanel-content>Photo by Agence Olloweb on Unsplash</div></div><div id=rightPanel onclick='newAd()'><!-- <img> --><div id=rightPanel-content>Photo by Benjamin Dada on Unsplash</div></div>")
+	location.reload(true);
 }
