@@ -8,6 +8,12 @@ git submodule update --init --recursive
 ```
 
 ### Starting containers
+Before creating containers make sure to create secrets.toml file at the root of project.
+
+```
+echo 'serial = "your-secret-key"' > secrets.toml
+```
+
 ```
 # To start up containers 
 docker-compose up -d
