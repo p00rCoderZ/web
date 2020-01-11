@@ -68,7 +68,7 @@ nav{
 	
 }
 
-#login:hover{
+#login:hover, #signup:hover, #logo:hover{
 	background-color:lightgray;
 	
 	
