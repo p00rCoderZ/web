@@ -2,3 +2,11 @@ function newAd(){
 	$('#main').html("<div id=info>Wypełnij poniższe pola aby dodać ogłoszenie</div><form action='add.html' method='post' id='create_post'>    Tytuł: <input type='text' name='title'><br>    Treść: <textarea name='content' form='create_post'></textarea><br>    <input type='radio' id='seek' name='type' value='Szukam pomocy'>    <label for='seek'>Szukam pomocy</label>    <input type='radio' id='offer' name='type' value='Oferuję pomoc'>    <label for='offer'>Oferuję pomoc</label>    <br>    <select name='tags' size='3' multiple>        <option value='tag1'>tag1</option>        <option value='tag2'>tag2</option>        <option value='tag3'>tag3</option   </select>    <br>    <input type='submit' value='Prześlij'>  </form>");	
 	
 }
+
+function logIn(){
+	$('#main').html("<div id=info>Logowanie</div><form action='login.html' method='post' id='login_form'>Login: <input type='text' name='login'><br>Hasło: <input type='password' name='password'><br><input type='submit' value='Zaloguj'></form>");
+}
+
+function mainPage(){
+	$('main').html("<div id=info>Przeglądaj istniejące ogłoszenia lub dodaj własne!</div><div id=leftPanel><!-- <img> --><div id=leftPanel-content>Photo by Agence Olloweb on Unsplash</div></div><div id=rightPanel onclick='newAd()'><!-- <img> --><div id=rightPanel-content>Photo by Benjamin Dada on Unsplash</div></div>")
+}
