@@ -4,7 +4,7 @@ function newAd(){
 }
 
 function logIn(){
-	$('#main').html("<div id=info>Logowanie</div><form action='login.html' method='post' id='login_form'>Login: <input type='text' name='login'><br>Hasło: <input type='password' name='password'><br><input type='submit' value='Zaloguj'></form>");
+	$('#main').html("<div id=info>Logowanie</div><div id=widePanel ><form action='login.html' method='post' id='login_form'>Login: <input type='text' name='login'><br>Hasło: <input type='password' name='password'><br><input type='submit' value='Zaloguj'></form></div>");
 }
 
 function mainPage(){
