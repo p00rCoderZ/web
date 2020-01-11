@@ -34,14 +34,37 @@ nav{
 	display:block;
 	float:left;
 }
+#loginbox{
+	height:100%;
+	width:30%;
+	float:right;
+	
+}
 #login{
 	/* background-color:purple; */
 	height:100%;
-	width:15%;
-	float:right;
+	width:50%;
+	
+	float:left;
 	display:inline-block;
+	
 	line-height:500%;	
 	text-align:center;
+	
+	
+}
+
+#signup{
+	
+	height:100%;
+	width:50%;
+	
+	float:left;
+	display:inline-block;
+	
+	line-height:500%;	
+	text-align:center;
+	
 	
 	
 }
