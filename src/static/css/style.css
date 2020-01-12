@@ -1,7 +1,7 @@
 
 @font-face {
   font-family: 'Roboto';
-  src: url('../Roboto/Roboto-Regular.ttf') @ttf;
+  src: url('../font/Roboto/Roboto-Regular.ttf') @ttf;
 }
 
 body{
@@ -25,7 +25,7 @@ nav{
 
 #logo{
 	/* background-color:green;	*/
-	background-image:url('logo.png');
+	background-image:url('../img/logo.png');
 	background-repeat:no-repeat;
 	background-size: contain;	
 	width:8em;	
@@ -127,7 +127,7 @@ nav{
 	
 }
 #leftPanel{
-	background-image:url('lupa.jpg'); 
+	background-image:url('../img/lupa.jpg'); 
 	background-position:auto;
 	background-repeat:no-repeat;
 	background-size: cover;
@@ -147,7 +147,7 @@ nav{
 
 #rightPanel{
 	
-	background-image:url('fillin-it-up-n.jpg'); 
+	background-image:url('../img/fillin-it-up-n.jpg'); 
 	background-position:auto;
 	background-repeat:no-repeat;
 	background-size: cover;
