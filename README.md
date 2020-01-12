@@ -28,3 +28,10 @@ go get -d ./...
 # check if API works properly
 curl api:8000
 ```
+
+### Running the website
+```
+go run main.go
+# then on your local machine in any browser
+localhost:8000
+```

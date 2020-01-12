@@ -51,5 +51,11 @@ func main() {
     fmt.Println("response Status:", resp.Status)
     fmt.Println("response Headers:", resp.Header)
     body, _ := ioutil.ReadAll(resp.Body)
-    fmt.Println("response Body:", string(body))
+	fmt.Println("response Body:", string(body))
+	
+	fs := http.FileServer(http.Dir("static"))
+	http.Handle("/", fs)
+
+	fmt.Println("Listening...")
+	http.ListenAndServe(":8080", nil)
 }
