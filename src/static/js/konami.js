@@ -29,7 +29,7 @@ document.addEventListener('keydown', function(e) {
 
     // if the last key is reached, activate cheats
     if (konamiCodePosition == konamiCode.length) {
-      alert("It's 'Aber natürlich ist Hans nass, er steht unter dem Wasserfall.");
+      alert("Aber natürlich ist Hans nass, er steht unter dem Wasserfall.");
       konamiCodePosition = 0;
     }
   } else {
