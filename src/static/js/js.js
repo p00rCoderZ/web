@@ -32,13 +32,18 @@ function newAd(){
 function logIn(){
 	$('#main').html(`
 	<div id=info>Logowanie</div>
-	<div id=widePanel >
-		<form action='login.html' method='post' id='login_form'>
-		    Email: <input type='text' name='email'><br>
-		    Hasło: <input type='password' name='password'><br>
-
-		    <input type='submit' value='Zaloguj'>
-		</form>
+	<div id=widePanel>
+    <form>
+        <div class="form-group" method="post">
+            <label for="exampleInputEmail1">Email</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Hasło</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Hasło">
+        </div>
+        <button type="submit" class="btn btn-dark">Zaloguj</button>
+    </form>
 	</div>
 	`);
 }
