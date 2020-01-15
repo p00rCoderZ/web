@@ -51,7 +51,7 @@ function signUp(){
 
 			<div class="form-group">
 				<label for="exampleInputEmail1">Email</label>
-				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Wpisz adres email">
 				<small id="emailHelp" class="form-text text-muted">Twój adres e-mail zostanie z nami!</small>
 			</div>
 			
