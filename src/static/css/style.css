@@ -35,7 +35,7 @@ nav{
 }
 #loginbox{
 	height:100%;
-	width:30%;
+	min-width:30%;
 	float:right;
 	
 	
@@ -57,7 +57,7 @@ nav{
 #signup{
 	
 	height:100%;
-	width:40%;
+	width:42.5%;
 	
 	float:left;
 	display:inline-block;
@@ -83,8 +83,9 @@ nav{
 }
 #loginIcon{
 	height:100%;
-	float:right;
-	margin-right:3%;	
+	min-width:15%;
+	float:left;
+	/* margin-right:3%;	 */
 }
 
 #main{
