@@ -38,13 +38,15 @@ nav{
 	height:100%;
 	width:30%;
 	float:right;
+	/* margin-right:-5%; */
+	display:inline;
 	
 	
 }
 #login{
 	/* background-color:purple; */
 	height:100%;
-	width:40%;
+	width:50%;
 	
 	float:left;
 	display:inline-block;
@@ -58,7 +60,7 @@ nav{
 #signup{
 	
 	height:100%;
-	width:40%;
+	width:42.5%;
 	
 	float:left;
 	display:inline-block;
@@ -70,7 +72,7 @@ nav{
 	
 }
 
-#login:hover, #signup:hover, #loginIcon:hover{
+#login:hover, #signup:hover{
 	background-color:#696969;
 	color:#ffbf30;
 	cursor: pointer;
@@ -82,11 +84,7 @@ nav{
 	cursor: pointer;
 	
 }
-#loginIcon{
-	height:100%;
-	float:right;
-	margin-right:3%;	
-}
+
 
 #main{
 	background-color:white;
@@ -176,4 +174,5 @@ footer{
 	height:3em;
 	float:left;
 	text-align:center;
+	color:#ffbf30;
 }
