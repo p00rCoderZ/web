@@ -4,7 +4,11 @@ function newAd(){
 }
 
 function logIn(){
-	$('#main').html("<div id=info>Logowanie</div><div id=widePanel ><form action='login.html' method='post' id='login_form'>Login: <input type='text' name='login'><br>Hasło: <input type='password' name='password'><br><input type='submit' value='Zaloguj'></form></div>");
+	$('#main').html("<div id=info>Logowanie</div><div id=widePanel ><form action='login.html' method='post' id='login_form'>Email: <input type='text' name='email'><br>Hasło: <input type='password' name='password'><br><input type='submit' value='Zaloguj'></form></div>");
+}
+
+function signUp(){
+	$('#main').html("<div id=info>Rejestracja</div><div id=widePanel ><form action='signup.html' method='post' id='signup_form'>Email: <input type='text' name='email'><br>Nick: <input type='text' name='nick'><br>Hasło: <input type='password' name='password'><br><input type='submit' value='Zarejestruj'></form></div>")
 }
 
 function mainPage(){
