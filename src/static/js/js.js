@@ -48,13 +48,31 @@ function signUp(){
 	<div id=info>Rejestracja</div>
 	<div id=widePanel >
 		<form action='signup.html' method='post' id='signup_form'>
-		    Email: <input type='text' name='email'><br>
-		    Nick: <input type='text' name='nick'><br>
-		    Hasło: <input type='password' name='password'><br>
 
-		    <input type='submit' value='Zarejestruj'>
+			<div class="form-group">
+				<label for="exampleInputEmail1">Email</label>
+				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+				<small id="emailHelp" class="form-text text-muted">Twój adres e-mail zostanie z nami!</small>
+			</div>
+			
+			
+			<div class="form-group">			
+				<label for="exampleInputLogin1">Login</label>
+				<input type="text" class="form-control" id="exampleInputLogin1" placeholder="Login">
+			</div>
+			
+			
+			<div class="form-group">			
+				<label for="exampleInputPassword1">Hasło</label>
+				<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Hasło">
+			 </div>
+			
+
+			<button type="submit" class="btn btn-dark">Zarejestruj</button>
 		</form>
 	</div>
+
+
 	`);
 		
 }
