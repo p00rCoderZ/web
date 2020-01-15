@@ -16,19 +16,19 @@ nav{
 	border-style: solid;
 	border-width:0 0  2px 0;
 	height:5em;
-	width:90%;
-	margin-left:5%;
-	margin-top:1%;
+	width:95%;
+	margin-left:2.5%;
+	margin-top:0.5%;
 	padding-left:5%;
 	padding-right:5%;	
 }
 
 #logo{
 	/* background-color:green;	*/
-	background-image:url('../img/logo.png');
+	background-image:url('../img/logox.png');
 	background-repeat:no-repeat;
 	background-size: contain;	
-	width:8em;	
+	width:20em;	
 	height:100%;	
 	display:block;
 	float:left;
