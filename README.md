@@ -35,3 +35,15 @@ go run main.go
 # then on your local machine in any browser
 localhost:8000
 ```
+
+### Helpful commands
+```
+# To rebuild containers
+docker-compose up -d --build
+# To rebuild specific container
+docker-compose up -d --build <container-name>
+# To rebuild images
+docker-compose build --no-cache
+# To force recreate containers
+docker-compose up -d --force-recreate
+```
