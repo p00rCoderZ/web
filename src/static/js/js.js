@@ -1,7 +1,7 @@
 function newAd(){
 	$('#main').html(`
 	<div id=info>Wypełnij poniższe pola aby dodać ogłoszenie</div>
-	<div id=widePanel>
+	<div id=widePanel3>
 	<form>
 		<div class="form-group" method="post">
 			<label for="exampleTitle">Tytuł</label>
@@ -46,7 +46,7 @@ function newAd(){
 function logIn(){
 	$('#main').html(`
 	<div id=info>Logowanie</div>
-	<div id=widePanel>
+	<div id=widePanel2>
     <form>
         <div class="form-group" method="post">
             <label for="exampleInputEmail1">Email</label>
@@ -57,7 +57,9 @@ function logIn(){
             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Podaj hasło">
         </div>
         <button type="submit" class="btn btn-dark">Zaloguj</button>
-    </form>
+	</form>
+	
+
 	</div>
 	`);
 }
@@ -65,7 +67,7 @@ function logIn(){
 function signUp(){
 	$('#main').html(`
 	<div id=info>Rejestracja</div>
-	<div id=widePanel >
+	<div id=widePanel2>
 		<form action='signup.html' method='post' id='signup_form'>
 
 			<div class="form-group">
