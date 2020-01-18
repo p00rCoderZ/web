@@ -123,6 +123,30 @@ nav{
 	/* margin-top:5%; */
 	
 }
+
+#widePanel2{
+	background-color:white;
+	height:100%;
+	width:100%;
+	float:left;
+	padding-left:35%;
+	padding-right:35%;
+	
+	/* margin-top:5%; */
+	
+}
+
+#widePanel3{
+	background-color:white;
+	height:100%;
+	width:100%;
+	float:left;
+	padding-left:30%;
+	padding-right:30%;
+	
+	/* margin-top:5%; */
+	
+}
 #leftPanel:hover, #rightPanel:hover{
 	
 	-webkit-box-shadow: -14px 13px 25px -2px rgba(0,0,0,0.75);
