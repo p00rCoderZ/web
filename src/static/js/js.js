@@ -1,30 +1,44 @@
 function newAd(){
 	$('#main').html(`
 	<div id=info>Wypełnij poniższe pola aby dodać ogłoszenie</div>
-	<div id=widePanel >
-
-		<form action="add.html" method="post" id="create_post">
-			Tytuł: <input type="text" name="title"><br>
-			Treść: <textarea name="content" form="create_post"></textarea><br>
-		
-			<input type="radio" id="seek" name="type" value="Szukam pomocy">
-			<label for="seek">Szukam pomocy</label>
-		
-			<input type="radio" id="offer" name="type" value="Oferuję pomoc">
-			<label for="offer">Oferuję pomoc</label>
-			<br>
-		
-			<select name="tags" size="3" multiple>
-				<option value="tag1">tag1</option>
-				<option value="tag2">tag2</option>
-				<option value="tag3">tag3</option>
+	<div id=widePanel>
+	<form>
+		<div class="form-group" method="post">
+			<label for="exampleTitle">Tytuł</label>
+			<input type="text" class="form-control" id="exampleTitle" aria-describedby="emailHelp" placeholder="Podaj tytuł ogłoszenia">
+		<div class="form-group">
+			<label for="exampleContent">Treść</label>
+			<textarea class="form-control" id="exampleContent" rows="3" placeholder="Podaj treść ogłoszenia"></textarea>
+		</div>
+	
+		<div class="form-check">
+			<input class="form-check-input" type="radio" name="exampleRadios" id="choice1" value="seek" checked>
+			<label class="form-check-label" for="choice1">
+				Szukam pomocy
+			</label>
+		</div>
+		<div class="form-check">
+			<input class="form-check-input" type="radio" name="exampleRadios" id="choice2" value="offer">
+			<label class="form-check-label" for="choice2">
+				Oferuję pomoc
+			</label>
+		</div>
+		<br>
+		<div class="form-group">
+			<label for="exampleSelect">Wybierz tagi</label>
+			<select multiple class="form-control" id="exampleSelect">
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
 			</select>
-		
-		
-			<br>
-			<input type="submit" value="Prześlij">
-		</form>
-	</div>
+			<small id="selectHelp" class="form-text text-muted">Przytrzymaj ctrl aby wybrać kilka tagów</small>
+		</div>
+	
+		<button type="submit" class="btn btn-dark">Dodaj</button>
+	  </form>
+	  </div>
 	`);
 	
 }
