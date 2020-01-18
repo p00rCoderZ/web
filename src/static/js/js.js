@@ -50,11 +50,11 @@ function logIn(){
     <form>
         <div class="form-group" method="post">
             <label for="exampleInputEmail1">Email</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Podaj adres email">
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Hasło</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Hasło">
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Podaj hasło">
         </div>
         <button type="submit" class="btn btn-dark">Zaloguj</button>
     </form>
@@ -70,20 +70,20 @@ function signUp(){
 
 			<div class="form-group">
 				<label for="exampleInputEmail1">Email</label>
-				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Podaj adres email">
 				<small id="emailHelp" class="form-text text-muted">Twój adres e-mail zostanie z nami!</small>
 			</div>
 			
 			
 			<div class="form-group">			
 				<label for="exampleInputLogin1">Login</label>
-				<input type="text" class="form-control" id="exampleInputLogin1" placeholder="Login">
+				<input type="text" class="form-control" id="exampleInputLogin1" placeholder="Podaj login">
 			</div>
 			
 			
 			<div class="form-group">			
 				<label for="exampleInputPassword1">Hasło</label>
-				<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Hasło">
+				<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Podaj hasło">
 			 </div>
 			
 
