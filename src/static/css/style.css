@@ -30,7 +30,7 @@ nav{
 	background-image:url('../img/logox.png');
 	background-repeat:no-repeat;
 	background-size: contain;	
-	width:20em;	
+	width:20%;	
 	height:100%;	
 	display:block;
 	float:left;
@@ -41,6 +41,7 @@ nav{
 	float:right;
 	/* margin-right:-5%; */
 	display:inline;
+	font-size: 0.85vw;
 	
 	
 }
@@ -98,7 +99,7 @@ nav{
 	height:5%;
 	margin-bottom:4%;
 	/* background-color:green; */
-	font-size: 3em;
+	font-size: 3vw;
 	text-align:center;
 	
 	
@@ -107,9 +108,12 @@ nav{
 #leftPanel, #rightPanel{
 	
 	background-color:white;
-	height:650px;
-	width:650px;
-	margin-left: calc((100% - 1300px)/ 3);
+	/* height:650px;
+	width:650px; */
+	height:75%;
+	width:35%;
+	/* margin-left: calc((100% - 1300px)/ 3); */
+	margin-left: 10%;
 	float:left;
 	
 }
