@@ -196,6 +196,28 @@ nav{
 	opacity:0.5;
 }
 
+@media screen and (max-width: 1400px){
+	#widePanel2{
+		background-color:white;
+		height:100%;
+		width:100%;
+		float:left;
+		padding-left:25%;
+		padding-right:25%;
+	}
+	#widePanel3{
+		background-color:white;
+		height:100%;
+		width:100%;
+		float:left;
+		padding-left:20%;
+		padding-right:20%;
+		
+		/* margin-top:5%; */
+		
+	}
+}
+
 @media screen and (max-width: 1000px){
 	#rightPanel, #leftPanel{
 		background-color:white;
@@ -207,6 +229,30 @@ nav{
 	}
 }
 
+@media screen and (max-width: 800px){
+
+	#widePanel2{
+		background-color:white;
+		height:100%;
+		width:100%;
+		float:left;
+		padding-left:15%;
+		padding-right:15%;
+	}
+
+	#widePanel3{
+		background-color:white;
+		height:100%;
+		width:100%;
+		float:left;
+		padding-left:10%;
+		padding-right:10%;
+		
+		/* margin-top:5%; */
+		
+	}
+}
+
 @media screen and (max-width: 500px){
 	#rightPanel, #leftPanel{
 		background-color:white;
@@ -215,6 +261,15 @@ nav{
 		margin-left: 10%;
 		float:left;
 		margin-bottom: 2%;
+	}
+
+	#widePanel2, #widePanel3{
+		background-color:white;
+		height:100%;
+		width:100%;
+		float:left;
+		padding-left:5%;
+		padding-right:5%;
 	}
 }
 
