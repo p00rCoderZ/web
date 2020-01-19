@@ -1,0 +1,20 @@
+{{template "base" .}} 
+{{define "title"}}Post #{{.Post.ID}}{{ end }}
+{{define "body"}}
+{{ with.Post }}
+<div class="snippet">
+  <div class="metadata">
+    <strong>Type: {{.Type}}</strong><br>
+    <strong>Title: {{.Title}}</strong>
+    <span>#{{.ID}}</span>
+  </div>
+  <pre><code>{{.Content}}</code></pre>
+  <div class="metadata">
+{{ end }}
+
+    <time><a href="/user/{{.User.ID}}">Created by: {{.User.Nick}}</a></time>
+
+  </div>
+</div>
+
+{{ end }}

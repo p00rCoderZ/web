@@ -1,0 +1,25 @@
+{{template "base" .}} {{define "title"}}Home{{ end }}
+{{define "body"}}
+<div id="main">
+  <div id=info>Przeglądaj istniejące ogłoszenia lub dodaj własne!</div>
+  <a href="/offerts" ><div id=leftPanel onclick="advertisements()">
+    <!-- <img> -->
+    <div id=leftPanel-content>
+      Photo by Agence Olloweb on Unsplash
+    </div>
+
+    
+  </div></a>
+
+
+  <a href="/post/create" ><div id=rightPanel onclick="newAd()">
+
+    <!-- <img> -->
+    <div id=rightPanel-content>
+      Photo by Andrew Neel on Unsplash
+    </div>
+    
+  </div></a>
+
+</div>
+{{ end }}

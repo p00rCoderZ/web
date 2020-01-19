@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "/Users/rafalkita/go/testapi"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "testapi"
+	}
+}
