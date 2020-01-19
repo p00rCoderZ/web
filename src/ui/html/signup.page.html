@@ -2,6 +2,8 @@
 {{define "title"}}Signup{{end}}
 
 {{define "body"}}
+<div id=info>Rejestracja</div>
+	<div id=widePanel2>
     <form action="/user/signup" method="POST" novalidate>
         <input type='hidden' name='csrf_token' value='{{.CSRFToken}}'>
         {{with .Form}}
@@ -19,30 +21,33 @@
                 {{end}}
                 <input type="text" name="surname" value='{{.Get "surname"}}'>
             </div> -->
-            <div>
-                <label>Nick:</label>
+
+            <div class="form-group">			
+                <label for="exampleInputLogin1">Login</label>
                 {{with .Errors.Get "nick"}}
                     <label class="error">{{.}}</label>
                 {{end}}
-                <input type="text" name="nick" value='{{.Get "nick"}}'>
+                <input type="text" name="nick" class="form-control" id="exampleInputLogin1" placeholder="Podaj login" value='{{.Get "nick"}}'>
             </div> 
-            <div>
-                <label>E-mail:</label>
+
+            <div class="form-group" method="post">
+                <label for="exampleInputEmail1">Email</label>
                 {{with .Errors.Get "email"}}
                     <label class="error">{{.}}</label>
                 {{end}}
-                <input type="email" name="email" value='{{.Get "email"}}'>
+                <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Podaj adres email" value='{{.Get "email"}}'>
             </div>
-            <div>
-                <label>Password:</label>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Hasło</label>
                 {{with .Errors.Get "password"}}
                     <label class="error">{{.}}</label>
                 {{end}}
-                <input type="password" name="password" value='{{.Get "password"}}'>
+                <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Podaj hasło" value='{{.Get "password"}}'>
             </div>
-            <div>
-                <input type="submit" value="Signup">
-            </div>
+            
+            <button type="submit" class="btn btn-dark">Zaloguj</button>
         {{end}}
     </form>
+    </div>
 {{end}}
+
