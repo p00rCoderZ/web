@@ -193,16 +193,16 @@ nav{
 }
 @media screen and (max-width: 1500px){
 	#logo{
-			height:100%;
-			width:40%;
-		}
+		height:100%;
+		width:40%;
+	}
 }
 @media screen and (max-width: 1400px){
 	
 	#logo{
-			height:100%;
-			width:40%;
-		}
+		height:100%;
+		width:40%;
+	}
 	#loginbox{
 		font-size:1em;
 	}
@@ -221,17 +221,14 @@ nav{
 		float:left;
 		padding-left:20%;
 		padding-right:20%;
-		
-		/* margin-top:5%; */
-		
 	}
 }
 
 @media screen and (max-width: 1000px){
 	#logo{
-			height:100%;
-			width:40%;
-		}
+		height:100%;
+		width:40%;
+	}
 
 	#rightPanel, #leftPanel{
 		background-color:white;
@@ -247,7 +244,6 @@ nav{
 @media screen and (max-width: 800px){
 	nav{
 		margin:0;
-
 		width:100%;
 		padding-left:5%;
 		padding-right:0%;
@@ -280,15 +276,13 @@ nav{
 		float:left;
 		padding-left:10%;
 		padding-right:10%;
-		
-		/* margin-top:5%; */
-		
+
 	}
 }
 
 @media screen and (max-width: 500px){
 	nav{
-				padding-left:5%;
+		padding-left:5%;
 	}
 	#loginbox{
 		margin-left:0;
@@ -296,10 +290,6 @@ nav{
 	#logo{
 		margin-top:1em;
 	}
-	
-	
-	
-	
 	
 	#rightPanel, #leftPanel{
 		background-color:white;
