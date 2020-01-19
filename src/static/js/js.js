@@ -102,7 +102,6 @@ function mainPage(){
 	location.reload(true);
 }
 function advertisements(){
-	console.log("XD");
 	$('#logo').html(`
 	<style>
 		nav{
