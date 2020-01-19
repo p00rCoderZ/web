@@ -196,6 +196,28 @@ nav{
 	opacity:0.5;
 }
 
+@media screen and (max-width: 1000px){
+	#rightPanel, #leftPanel{
+		background-color:white;
+		height:50%;
+		width:80%;
+		margin-left: 10%;
+		float:left;
+		margin-bottom: 5%;
+	}
+}
+
+@media screen and (max-width: 500px){
+	#rightPanel, #leftPanel{
+		background-color:white;
+		height:30%;
+		width:80%;
+		margin-left: 10%;
+		float:left;
+		margin-bottom: 2%;
+	}
+}
+
 
 footer{
 	background-color:black;
