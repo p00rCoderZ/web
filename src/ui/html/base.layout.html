@@ -3,22 +3,59 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{template "title" .}} - Kurier Uniwersytet Pedagogiczny</title>
     <!-- Link to the CSS stylesheet and favicon -->
-    <link rel="stylesheet" href="/static/css/main.css" />
-    <link
+    <!-- <link rel="stylesheet" href="/static/css/main.css" /> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	  <link rel="stylesheet" href="/static/css/style.css" type="text/css">
+    <!-- <link
       rel="shortcut icon"
       href="/static/img/favicon.ico"
       type="image/x-icon"
-    />
+    /> -->
     <!-- Also link to some fonts hosted by Google -->
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700"
-    />
+    /> -->
   </head>
   <body>
-    <header>
+
+    <script src="/static/js/konami.js"></script>
+    <script src="/static/js/jquery-3.4.1.js"></script>
+    <script src="/static/js/js.js"></script>
+    <script type="text/javascript">
+  
+    </script>
+    
+    <nav>
+
+    <a href="/"><div id="logo" onclick="mainPage()"></div> </a>
+
+        <div id=loginbox>
+
+          <!-- <div id=signup onclick="signUp()">
+            Rejestracja
+          </div>
+          <div id=login onclick="logIn()">
+            Logowanie 
+          </div> -->
+
+          {{if .AuthenticatedUser}}
+            <form action="/user/logout" method="POST">
+              <input type='hidden' name='csrf_token' value='{{.CSRFToken}}'>
+              <button >Logout ({{.AuthenticatedUser.Nick}})</button>
+            </form>
+          {{else}}  
+              <a href="/user/signup"><div id="signup"> Rejestracja </div></a>
+              <a href="/user/login"><div id="login"> Logowanie </div></a>
+          {{end}}
+
+        </div>
+      
+    </nav>
+    <!-- <header>
       <h1><a href="/">Kurier Uniwersytet Pedagogiczny</a></h1>
     </header>
     <nav>
@@ -40,7 +77,9 @@
         {{end}}
       </div>
 
-    </nav>
+    </nav> -->
+
+   
     <section>
         {{with .Flash}}
         <div class='flash '>{{.}}</div>
@@ -49,7 +88,7 @@
       </section>
     {{template "footer" .}}
     <!-- And include the JavaScript file -->
-    <script src="/static/js/main.js" type="text/javascript"></script>
+    <!-- <script src="/static/js/main.js" type="text/javascript"></script> -->
   </body>
 </html>
 {{ end }}

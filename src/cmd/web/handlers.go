@@ -11,6 +11,10 @@ import (
 )
 
 func (app *application) homePage(w http.ResponseWriter, r *http.Request) {
+
+	app.render(w, r, "home.page.html", &templateData{})
+}
+func (app *application) offertsPage(w http.ResponseWriter, r *http.Request) {
 	// panic("oops! Something went wrong!")
 	// var posts []*models.Post
 
@@ -20,7 +24,7 @@ func (app *application) homePage(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	app.render(w, r, "home.page.html", &templateData{
+	app.render(w, r, "offerts.page.html", &templateData{
 		Posts: posts,
 	})
 }

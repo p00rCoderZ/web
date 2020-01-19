@@ -2,6 +2,8 @@
 {{define "title"}}Create new Post{{end}}
 
 {{define "body"}}
+{{if .AuthenticatedUser}}
+
     <form action="/post/create" method="post">
         <input type='hidden' name='csrf_token' value='{{.CSRFToken}}'>
         {{with .Form}}
@@ -37,4 +39,8 @@
         </div>
         {{end}}
     </form>
+{{else}}
+    <div>Drogi uytkowniku, najpierw sie zaloguj</div>
+
+{{end}}
 {{end}}

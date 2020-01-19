@@ -35,9 +35,10 @@ func (app *application) routes() http.Handler {
 
 	router := mux.NewRouter()
 	router.Handle("/", dynamicMiddleware.Then(http.HandlerFunc(app.homePage))).Methods("GET")
+	router.Handle("/offerts", dynamicMiddleware.Then(http.HandlerFunc(app.offertsPage))).Methods("GET")
 	// router.HandleFunc("/", app.homePage).Methods("GET")
 
-	router.Handle("/post/create", dynamicMiddleware.Then(rau.Then(http.HandlerFunc(app.createPostPageForm)))).Methods("GET")
+	router.Handle("/post/create", dynamicMiddleware.Then(http.HandlerFunc(app.createPostPageForm))).Methods("GET")
 	router.Handle("/post/create", dynamicMiddleware.Then(rau.Then(http.HandlerFunc(app.createPostPage)))).Methods("POST")
 	router.Handle("/post/{id}", dynamicMiddleware.Then(http.HandlerFunc(app.showPostPage))).Methods("GET")
 
