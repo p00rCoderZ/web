@@ -3,44 +3,56 @@
 
 {{define "body"}}
 {{if .AuthenticatedUser}}
-
+<div id=info>Wypełnij poniższe pola aby dodać ogłoszenie</div>
+<div id=widePanel3>
     <form action="/post/create" method="post">
         <input type='hidden' name='csrf_token' value='{{.CSRFToken}}'>
         {{with .Form}}
         {{with .Errors.Get "generic"}}
                 <div class="error">{{.}}</div>
             {{end}}
-        <div>
-            <label for="">Type:</label>
+
+            <!-- <label for="">Typ:</label> -->
+                {{with .Errors.Get "title"}}
+                    <label class="error">{{.}}</label>
+                {{end}}
+                {{$exp := or (.Get "type") "seek"}}
+        <div class="form-check form-check-inline">
+                
+                <input class="form-check-input" type="radio" name="type" id="choice1" value="seek" checked {{if (eq $exp "seek")}}checked{{end}}>
+                <label class="form-check-label" for="choice1">
+                    Szukam pomocy
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="type" id="choice2" value="offer" {{if (eq $exp "offer")}}checked{{end}}>
+                <label class="form-check-label" for="choice2">
+                    Oferuję pomoc
+                </label>
+        </div>    
+        
+        <div class="form-group" method="post">
+            <label for="exampleTitle">Tytuł</label>
             {{with .Errors.Get "title"}}
                 <label class="error">{{.}}</label>
             {{end}}
-            {{$exp := or (.Get "type") "seek"}}
-            <input type="radio" name="type" value="seek" {{if (eq $exp "seek")}}checked{{end}}> Seek
-            <input type="radio" name="type" value="offer" {{if (eq $exp "offer")}}checked{{end}}> Offer
-            <!-- <input type="text" name="type" value='{{.Get "type"}}'> -->
-        </div>
-        <div>
-            <label for="">Title:</label>
-            {{with .Errors.Get "title"}}
-                <label class="error">{{.}}</label>
-            {{end}}
-            <input type="text" name="title" value='{{.Get "title"}}'>
-        </div>
-        <div>
+            <input name="title" type="text" class="form-control" id="exampleTitle" aria-describedby="emailHelp" placeholder="Podaj tytuł ogłoszenia" value='{{.Get "title"}}'>
+        <div class="form-group">
+            <label for="exampleContent">Treść</label>
             {{with .Errors.Get "content"}}
                 <label class="error">{{.}}</label>
             {{end}}
-            <label for="">Content:</label>
-            <textarea name="content" value='{{.Get "content"}}'></textarea>
+            <textarea name="content" class="form-control" id="exampleContent" rows="3" placeholder="Podaj treść ogłoszenia" value='{{.Get "content"}}'></textarea>
         </div>
-        <div>
-            <input type="submit" value="Publish post!">
-        </div>
+
+
+        <button type="submit" class="btn btn-dark">Dodaj</button>
         {{end}}
     </form>
+</div>
 {{else}}
-    <div>Drogi uytkowniku, najpierw sie zaloguj</div>
+    <div id=info>Drogi użytkowniku, najpierw się zaloguj!</div>
+    
 
 {{end}}
 {{end}}
