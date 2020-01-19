@@ -45,7 +45,9 @@
           {{if .AuthenticatedUser}}
             <form action="/user/logout" method="POST">
               <input type='hidden' name='csrf_token' value='{{.CSRFToken}}'>
-              <button >Logout ({{.AuthenticatedUser.Nick}})</button>
+              <div id="login">
+                <button class="btn btn-test">Wyloguj ({{.AuthenticatedUser.Nick}})</button>
+              </div>
             </form>
           {{else}}  
               <a href="/user/signup"><div id="signup"> Rejestracja </div></a>
@@ -82,7 +84,9 @@
    
     <section>
         {{with .Flash}}
-        <div class='flash '>{{.}}</div>
+        <div id=widePanel3>
+          <div class='flash'>{{.}}</div>
+        </div>
         {{end}}
         {{template "body" .}}
       </section>
