@@ -1,27 +1,50 @@
 {{template "base" .}} {{define "title"}}Home{{ end }}
 {{define "body"}}
-<h2>Latest Posts</h2>
+<!-- <h2>Ostatnie Ogłoszenia</h2> -->
 {{if .Posts}}
-<table>
-  <tr>
-    <th>Type</th>
-    <th>Title</th>
-    <!-- <th>Created</th> -->
-    <th>ID</th>
-  </tr>
-  {{range.Posts}}
-  <tr>
-    <td>
-      {{.Type}}
-    </td>
-    <td>
-      <a href="/post/{{.ID}}">{{.Title}}</a>
-    </td>
+
+<div id=info>Ostatnie Ogłoszenia</div>
+{{range.Posts}}
+<div class=ogloszenie>
+	<div class=topRow> 
+		<div class=tytul>
+			<a href="/post/{{.ID}}">{{.Title}}</a> 
+		</div>
+		<div class=typ>
+			{{.Type}}
+		</div>
+			
+	</div>
+	<div class=tresc>
+		????
+		{{.ID}}
+	</div>
+</div>
+{{end}}
+
+
+<!-- <table> -->
+  <!-- <tr> -->
+    <!-- <th>Type</th> -->
+    <!-- <th>Title</th> -->
+     <!-- <th>Created</th> --> 
+    <!-- <th>ID</th> -->
+  <!-- </tr> -->
+  <!-- {{range.Posts}} -->
+  <!-- <tr> -->
+    <!-- <td> -->
+      <!-- {{.Type}} -->
+    <!-- </td> -->
+    <!-- <td> -->
+      <!-- <a href="/post/{{.ID}}">{{.Title}}</a> -->
+    <!-- </td> -->
     <!-- <td>{{humanDate .Created}}</td> -->
-    <td>#{{.ID}}</td>
-  </tr>
-  {{end}}
-</table>
+    <!-- <td> -->
+		<!-- #{{.ID}} -->
+	<!-- </td> -->
+  <!-- </tr> -->
+  <!-- {{end}} -->
+<!-- </table> -->
 
 {{else}}
 <p>There's nothing to see here... yet!</p>
