@@ -13,9 +13,7 @@
             {{end}}
 
             <!-- <label for="">Typ:</label> -->
-                {{with .Errors.Get "title"}}
-                    <label class="error">{{.}}</label>
-                {{end}}
+                
                 {{$exp := or (.Get "type") "seek"}}
         <div class="form-check form-check-inline">
                 
@@ -29,7 +27,10 @@
                 <label class="form-check-label" for="choice2">
                     Oferuję pomoc
                 </label>
-        </div>    
+        </div>
+        {{with .Errors.Get "title"}}
+                    <label class="error">{{.}}</label>
+        {{end}}    
         
         <div class="form-group" method="post">
             <label for="exampleTitle">Tytuł</label>
