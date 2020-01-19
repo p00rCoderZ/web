@@ -1,0 +1,40 @@
+{{template "base" .}}
+{{define "title"}}Create new Post{{end}}
+
+{{define "body"}}
+    <form action="/post/create" method="post">
+        <input type='hidden' name='csrf_token' value='{{.CSRFToken}}'>
+        {{with .Form}}
+        {{with .Errors.Get "generic"}}
+                <div class="error">{{.}}</div>
+            {{end}}
+        <div>
+            <label for="">Type:</label>
+            {{with .Errors.Get "title"}}
+                <label class="error">{{.}}</label>
+            {{end}}
+            {{$exp := or (.Get "type") "seek"}}
+            <input type="radio" name="type" value="seek" {{if (eq $exp "seek")}}checked{{end}}> Seek
+            <input type="radio" name="type" value="offer" {{if (eq $exp "offer")}}checked{{end}}> Offer
+            <!-- <input type="text" name="type" value='{{.Get "type"}}'> -->
+        </div>
+        <div>
+            <label for="">Title:</label>
+            {{with .Errors.Get "title"}}
+                <label class="error">{{.}}</label>
+            {{end}}
+            <input type="text" name="title" value='{{.Get "title"}}'>
+        </div>
+        <div>
+            {{with .Errors.Get "content"}}
+                <label class="error">{{.}}</label>
+            {{end}}
+            <label for="">Content:</label>
+            <textarea name="content" value='{{.Get "content"}}'></textarea>
+        </div>
+        <div>
+            <input type="submit" value="Publish post!">
+        </div>
+        {{end}}
+    </form>
+{{end}}

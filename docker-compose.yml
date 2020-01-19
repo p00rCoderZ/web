@@ -44,6 +44,7 @@ services:
     tty: true
     stdin_open: true
     entrypoint: /usr/api/src/server/server.py
+    # entrypoint: /bin/bash
     links:
       - postgres
     environment:
