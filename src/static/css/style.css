@@ -16,10 +16,11 @@ nav{
 	/* background-color:yellow; */
 	border-style: solid;
 	border-width:0 0  2px 0;
-	height:5em;
+	height:6em;
 	width:95%;
+	padding-top:0.5%;
 	margin-left:2.5%;
-	margin-top:0.5%;
+	/* margin-top:0.5%; */
 	padding-left:5%;
 	padding-right:5%;	
 }

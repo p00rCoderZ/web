@@ -101,4 +101,54 @@ function signUp(){
 function mainPage(){
 	location.reload(true);
 }
+function advertisements(){
+	console.log("XD");
+	$('#logo').html(`
+	<style>
+		nav{
+			background-color:white;
+			position:fixed;
 
+			index-z:1000;
+		}
+		#info{
+			margin-top:2em;
+		}	
+	</style>
+	
+	
+	`);
+	
+	//Place holder \/
+	$('#main').html(`
+	<div id=info>Rejestracja</div>
+	<div id=widePanel2>
+		<form action='signup.html' method='post' id='signup_form'>
+
+			<div class="form-group">
+				<label for="exampleInputEmail1">Email</label>
+				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Podaj adres email">
+				<small id="emailHelp" class="form-text text-muted">Twój adres e-mail zostanie z nami!</small>
+			</div>
+			
+			
+			<div class="form-group">			
+				<label for="exampleInputLogin1">Login</label>
+				<input type="text" class="form-control" id="exampleInputLogin1" placeholder="Podaj login">
+			</div>
+			
+			
+			<div class="form-group">			
+				<label for="exampleInputPassword1">Hasło</label>
+				<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Podaj hasło">
+			 </div>
+			
+
+			<button type="submit" class="btn btn-dark">Zarejestruj</button>
+		</form>
+	</div>
+
+
+	`);
+	
+}
