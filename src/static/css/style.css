@@ -4,7 +4,7 @@
   src: url('../font/Roboto/Roboto-Regular.ttf') @ttf;
 }
 
-body{
+body,html{
 	font-family:'Roboto', sans-serif;
 	/* background-color:red; */
 	height:100%;
@@ -90,7 +90,7 @@ nav{
 
 #main{
 	background-color:white;
-	height:900px;
+	height:100%;
 	width:100%;
 	padding-top:1%;
 	/* margin:auto; */
@@ -195,6 +195,124 @@ nav{
 	background-color:white;
 	opacity:0.5;
 }
+@media screen and (max-width: 1500px){
+	#logo{
+		height:100%;
+		width:40%;
+	}
+}
+@media screen and (max-width: 1400px){
+	
+	#logo{
+		height:100%;
+		width:40%;
+	}
+	#loginbox{
+		font-size:1em;
+	}
+	#widePanel2{
+		background-color:white;
+		height:100%;
+		width:100%;
+		float:left;
+		padding-left:25%;
+		padding-right:25%;
+	}
+	#widePanel3{
+		background-color:white;
+		height:100%;
+		width:100%;
+		float:left;
+		padding-left:20%;
+		padding-right:20%;
+	}
+}
+
+@media screen and (max-width: 1000px){
+	#logo{
+		height:100%;
+		width:40%;
+	}
+
+	#rightPanel, #leftPanel{
+		background-color:white;
+		height:50%;
+		width:80%;
+		margin-left: 10%;
+		float:left;
+		margin-bottom: 5%;
+		
+	}
+}
+
+@media screen and (max-width: 800px){
+	nav{
+		margin:0;
+		width:100%;
+		padding-left:5%;
+		padding-right:0%;
+	}
+	#loginbox{
+		width:55%;
+		height:100%;
+		margin-left:0;
+		margin-right:0;
+	}
+	#logo{
+		height:100%;
+		width:40%;
+	}
+
+
+	#widePanel2{
+		background-color:white;
+		height:100%;
+		width:100%;
+		float:left;
+		padding-left:15%;
+		padding-right:15%;
+	}
+
+	#widePanel3{
+		background-color:white;
+		height:100%;
+		width:100%;
+		float:left;
+		padding-left:10%;
+		padding-right:10%;
+
+	}
+}
+
+@media screen and (max-width: 500px){
+	nav{
+		padding-left:5%;
+	}
+	#loginbox{
+		margin-left:0;
+	}
+	#logo{
+		margin-top:1em;
+	}
+	
+	#rightPanel, #leftPanel{
+		background-color:white;
+		height:30%;
+		width:80%;
+		margin-left: 10%;
+		float:left;
+		margin-bottom: 2%;
+	}
+
+	#widePanel2, #widePanel3{
+		background-color:white;
+		height:100%;
+		width:100%;
+		float:left;
+		padding-left:5%;
+		padding-right:5%;
+	}
+}
 
 @media screen and (max-width: 1400px){
 	#widePanel2{
@@ -282,4 +400,5 @@ footer{
 	float:left;
 	text-align:center;
 	color:#ffbf30;
+	bottom:0;
 }
