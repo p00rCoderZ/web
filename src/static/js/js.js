@@ -120,7 +120,7 @@ function advertisements(){
 	
 	//Place holder \/
 	$('#main').html(`
-	<div id=info>Rejestracja</div>
+	<div id=info>Placeholder dla strony z ogłoszeniami</div>
 	<div id=widePanel2>
 		<form action='signup.html' method='post' id='signup_form'>
 
