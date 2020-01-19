@@ -4,7 +4,7 @@
   src: url('../font/Roboto/Roboto-Regular.ttf') @ttf;
 }
 
-body{
+body,html{
 	font-family:'Roboto', sans-serif;
 	/* background-color:red; */
 	height:100%;
@@ -89,7 +89,7 @@ nav{
 
 #main{
 	background-color:white;
-	height:900px;
+	height:100%;
 	width:100%;
 	padding-top:1%;
 	/* margin:auto; */
@@ -329,4 +329,5 @@ footer{
 	float:left;
 	text-align:center;
 	color:#ffbf30;
+	bottom:0;
 }
