@@ -2,19 +2,45 @@
 {{define "title"}}Post #{{.Post.ID}}{{ end }}
 {{define "body"}}
 {{ with.Post }}
-<div class="snippet">
-  <div class="metadata">
-    <strong>Type: {{.Type}}</strong><br>
-    <strong>Title: {{.Title}}</strong>
-    <span>#{{.ID}}</span>
-  </div>
-  <pre><code>{{.Content}}</code></pre>
-  <div class="metadata">
-{{ end }}
 
-    <time><a href="/user/{{.User.ID}}">Created by: {{.User.Nick}}</a></time>
+<div id=widePanel>
+  <br>
+  <table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Typ</th>
+            <th scope="col">Tytuł</th>
+            <th scope="col">ID</th>
+        </tr>
+    </thead>
 
-  </div>
+    <tbody>
+        
+        <tr>
+            <td>
+                {{if (eq .Type "seek")}}
+                    Szukam 
+                {{else}}
+                    Oferuję
+                {{end}}
+            </td>
+            
+            <td>{{.Title}}</td>
+            <td>#{{.ID}}</td>
+        </tr>
+        <tr>
+          <td colspan="3"><b>Treść:</b> {{.Content}}</td>
+        </tr>
+        {{end}}
+        <tr>
+          <td colspan="3">
+            <a href="/user/{{.User.ID}}">Stworzone przez: {{.User.Nick}}</a>
+          </td>
+        </tr>
+        
+    </tbody>
+</table>
+
 </div>
 
 {{ end }}

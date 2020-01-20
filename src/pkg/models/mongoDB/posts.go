@@ -277,3 +277,4 @@ func (m *PostModel) Latest() ([]*models.Post, error) {
 	// fmt.Println(posts)
 	return posts, nil
 }
+

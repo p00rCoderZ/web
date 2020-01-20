@@ -98,7 +98,7 @@ func (app *application) createPostPage(w http.ResponseWriter, r *http.Request) {
 		app.serverError(w, err)
 	}
 
-	app.session.Put(r, "flash", "Snippet successfully created!")
+	app.session.Put(r, "flash", "Dodano twoje ogłoszenie!")
 	http.Redirect(w, r, fmt.Sprintf("/"), http.StatusSeeOther)
 }
 
@@ -156,7 +156,7 @@ func (app *application) signupUser(w http.ResponseWriter, r *http.Request) {
 		app.serverError(w, err)
 	}
 
-	app.session.Put(r, "flash", "Your signup was successful. Please log in.")
+	app.session.Put(r, "flash", "Twoje konto zostało założone.")
 
 	http.Redirect(w, r, "/user/login", http.StatusSeeOther)
 }
@@ -177,7 +177,7 @@ func (app *application) loginUser(w http.ResponseWriter, r *http.Request) {
 	id, err := app.users.Authenticate(form.Get("email"), form.Get("password"))
 	if err == models.ErrInvalidCredentials {
 		// fmt.Println("I'm here!")
-		form.Errors.Add("generic", "Email or Password is incorrect")
+		form.Errors.Add("generic", "Email lub hasło jest nieprawidłowe")
 		app.render(w, r, "login.page.html", &templateData{Form: form})
 		return
 	}
@@ -197,7 +197,7 @@ func (app *application) logoutUser(w http.ResponseWriter, r *http.Request) {
 
 	app.session.Remove(r, "userID")
 
-	app.session.Put(r, "flash", "You've been logged out successfully!")
+	app.session.Put(r, "flash", "Zostałeś wylogowany!")
 	http.Redirect(w, r, "/", 303)
 	// fmt.Fprintln(w, "This is logoutUser")
 }
