@@ -124,7 +124,7 @@ func (m *UserModel) Authenticate(email, password string) (interface{}, error) {
 	var date map[string]interface{}
 	json.Unmarshal(body, &date)
 
-	if date["status"].(float64) == 400 {
+	if resp.StatusCode == 400 {
 
 		return nil, models.ErrInvalidCredentials
 	}
@@ -188,7 +188,7 @@ func (m *UserModel) Get(u string) (*models.User, error) {
 
 	json.Unmarshal(body, &date)
 
-	if date["status"].(float64) == 400 {
+	if resp.StatusCode == 400 {
 
 		return nil, models.ErrNoRecord
 	}

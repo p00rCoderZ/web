@@ -71,7 +71,7 @@ func (m *PostModel) Insert(p *models.Post) error {
 	var date map[string]interface{}
 	json.Unmarshal(body, &date)
 
-	if date["status"].(float64) == 400 || date["status"].(float64) == 500 {
+	if resp.StatusCode == 400 || resp.StatusCode == 500 {
 		// fmt.Println("is error")
 		return models.ErrBadRequest
 
